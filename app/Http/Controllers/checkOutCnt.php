@@ -36,6 +36,7 @@ class checkOutCnt extends Controller
         }
 
         \session()->flash('success','Your order placed.');
+        Session::forget('cart');
         return view('thankyou');
         //return redirect()->route('thankyou')->with('order_id',$order->id);
 
